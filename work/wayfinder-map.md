@@ -1,6 +1,6 @@
 # 中台页面、接口和流程开发：Wayfinder Map
 
-> 状态：已验证，待远程仓库创建与最终一致性核对
+> 状态：已完成，远程 main 已创建并推送
 > 建立日期：2026-10-12
 > 项目中文名：中台页面接口和流程开发
 > 仓库目标：`middle-platform-page-api-workflow`
@@ -26,7 +26,7 @@
 - [x] `npm start` 可启动页面和 API；`npm test` 覆盖创建、校验、提交、运行、成功/失败和非法状态跳转。
 - [x] 页面 E2E 能创建任务并看到状态流转、错误提示和详情。
 - [x] API 契约、状态机图、问题报告、修复引用和回归记录齐全。
-- [ ] Public GitHub 仓库无真实用户、token 和运行时日志。
+- [x] Public GitHub 仓库无真实用户、token 和运行时日志。
 
 ## Evidence
 
@@ -34,6 +34,7 @@
 - `npm run check`：PASS，5 个问题报告、31 个文件扫描。
 - Chromium 156.0.8078.4 完成创建、validate、submit、run、complete success 页面流程。
 - 非法 submit 返回 409，state/audit 未变化；failure 分支保留 `RETRIEVAL_FAILED`。
+- Remote：`https://github.com/kaijie0074-art/middle-platform-page-api-workflow`
 
 ## Not yet specified
 
