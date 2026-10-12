@@ -1,0 +1,14 @@
+{
+  "name": "middle-platform-page-api-workflow",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Deterministic retrieval-job middle platform simulation.",
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node scripts/run-regression.mjs",
+    "check": "node scripts/check-artifacts.mjs"
+  },
+  "devDependencies": { "playwright": "^1.60.0" }
+}

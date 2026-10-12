@@ -1,0 +1,45 @@
+{
+  "generatedAt": "2026-10-12T08:26:22.078Z",
+  "checks": [
+    {
+      "id": "health",
+      "status": "passed",
+      "detail": "service health contract"
+    },
+    {
+      "id": "create-detail-contract",
+      "status": "passed",
+      "detail": "job-1-a1168973"
+    },
+    {
+      "id": "input-error-envelope",
+      "status": "passed",
+      "detail": "INVALID_JOB_INPUT"
+    },
+    {
+      "id": "illegal-transition",
+      "status": "passed",
+      "detail": "409 without state or audit mutation"
+    },
+    {
+      "id": "success-workflow",
+      "status": "passed",
+      "detail": "draft→validated→queued→running→succeeded"
+    },
+    {
+      "id": "terminal-guard",
+      "status": "passed",
+      "detail": "terminal state rejects run"
+    },
+    {
+      "id": "failure-workflow",
+      "status": "passed",
+      "detail": "failed terminal state preserves error code"
+    },
+    {
+      "id": "page-workflow",
+      "status": "passed",
+      "detail": "Chromium page reflects API state and audit"
+    }
+  ]
+}

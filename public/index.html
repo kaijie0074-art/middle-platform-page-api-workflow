@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>检索任务中台</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">SIMULATED MIDDLE PLATFORM</p>
+      <h1>检索任务中台</h1>
+      <p class="subtitle">页面、接口和流程共享同一份 RetrievalJob 状态契约。</p>
+    </header>
+    <section class="panel">
+      <h2>创建任务</h2>
+      <form id="create-form">
+        <label>Query <input id="query" name="query" required minlength="2" value="browser retrieval"></label>
+        <label>Strategy
+          <select id="strategy" name="strategy">
+            <option value="strategy-v2">strategy-v2</option>
+            <option value="baseline">baseline</option>
+          </select>
+        </label>
+        <label>Owner <input id="owner" name="owner" value="demo-user"></label>
+        <button type="submit">Create job</button>
+      </form>
+      <p id="message" class="message" aria-live="polite">ready</p>
+    </section>
+    <section class="grid">
+      <article class="panel">
+        <h2>流程动作</h2>
+        <p>当前任务：<code id="job-id">none</code></p>
+        <div class="actions">
+          <button data-action="validate" disabled>Validate</button>
+          <button data-action="submit" disabled>Submit</button>
+          <button data-action="run" disabled>Run</button>
+          <button data-action="complete" data-outcome="success" disabled>Complete success</button>
+          <button data-action="complete" data-outcome="failure" disabled>Complete failure</button>
+        </div>
+      </article>
+      <article class="panel">
+        <h2>任务详情</h2>
+        <p>State：<strong id="state">none</strong></p>
+        <p>Error：<code id="error">none</code></p>
+        <h3>Audit</h3>
+        <ol id="audit"><li>none</li></ol>
+      </article>
+    </section>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
